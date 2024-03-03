@@ -1,55 +1,20 @@
-{{!
-    This file is part of Moodle - http://moodle.org/
 
-    Moodle is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    <!-- local/attendance/templates/activity_summary.mustache -->
 
-    Moodle is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-}}
-{{!
-    @template local_attendance/manage
-
-
-    Example context (json):
-    {
-
-    }
-}}
-<link rel="stylesheet" type="text/css" href="style.css">
-<h1>Attendance Report</h1>
-<table border="1">
-    <thead>
-        <tr>
-            <th>Userid</th>
-            <th>User</th>
-            <th>Date</th>
-            <th>Logged in</th>
-            <th>Logged out</th>
-            <th>Time Spent</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#result}}
-            <tr>
-                <td>{{userid}}</td>
-                <td>{{username}}</td>
-                <td>{{date}}</td>
-                <td>{{loggedin}}</td>
-                <td>{{loggedout}}</td>
-                <td>{{difference}}</td>
-            </tr>
-        {{/result}}
-    </tbody>
+<h3>{{#str}}activityreport, local_attendance{{/str}}</h3>
+<table border="1" style="width:100%">
+    <tr>
+        <th>{{#str}}userid, local_attendance{{/str}}</th>
+        <th>{{#str}}coursename, local_attendance{{/str}}</th>
+        <th>{{#str}}accesscount, local_attendance{{/str}}</th>
+        <th>{{#str}}totaltimespent, local_attendance{{/str}}</th>
+    </tr>
+    {{#users}}
+    <tr>
+        <td>{{userid}}</td>
+        <td>{{course_name}}</td>
+        <td>{{Access_count}}</td>
+        <td>{{total_time_spent_formatted}}</td>
+    </tr>
+    {{/users}}
 </table>
-
-
-
-

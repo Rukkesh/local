@@ -15,14 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_message', language 'en'
+ * Strings for component 'local_attendance', language 'en'
  *
  * @package   local_attendance
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
- defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die();
 
+// local/attendance/lang/en/local_attendance.php
 
- $string['pluginname'] = 'Attendance';
- $string['titlename'] = "Attendance";
+$string['pluginname'] = 'Attendance Tracking';
+$string['activityreport'] = 'Activity Report';
+$string['userid'] = 'User ID';
+$string['username'] = 'Username'; 
+$string['coursename'] = 'Course Name';
+$string['activitycount'] = 'Activity Count';
+$string['totaltimespent'] = 'Total Time Spent (H:M:S)'; 
+$string['date'] = 'Date'; 
