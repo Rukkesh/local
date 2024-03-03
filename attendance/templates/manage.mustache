@@ -1,0 +1,20 @@
+
+    <!-- local/attendance/templates/activity_summary.mustache -->
+
+<h3>{{#str}}activityreport, local_attendance{{/str}}</h3>
+<table border="1" style="width:100%">
+    <tr>
+        <th>{{#str}}userid, local_attendance{{/str}}</th>
+        <th>{{#str}}coursename, local_attendance{{/str}}</th>
+        <th>{{#str}}accesscount, local_attendance{{/str}}</th>
+        <th>{{#str}}totaltimespent, local_attendance{{/str}}</th>
+    </tr>
+    {{#users}}
+    <tr>
+        <td>{{userid}}</td>
+        <td>{{course_name}}</td>
+        <td>{{Access_count}}</td>
+        <td>{{total_time_spent_formatted}}</td>
+    </tr>
+    {{/users}}
+</table>
